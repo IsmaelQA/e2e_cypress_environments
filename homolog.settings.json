@@ -1,7 +1,7 @@
 {
-  "baseUrl" : "https://www.fastshop.com.br/web/" ,
-  "ambiente" : {
-    "login" : "147.413.320-71" ,
+  "baseUrl" : "http://automationpractice.pl/index.php" ,
+  "env" : {
+    "login" : "ismaautomacao@outlook.com" ,
     "senha" : "Zaxscd1728*"
   }
 }

@@ -28,8 +28,8 @@ Cypress.Commands.add('visitarUrl', () => {
     cy.visit('/')
 })
 
-Cypress.Commands.add('escreverNoElemento', (elemento, valor) => {
-    cy.get(elemento).should('be.visible').type(valor).should('have.value', valor)
+Cypress.Commands.add('EscreverNoCampo', (elemento, valor) => {
+    cy.get(elemento).type(valor, { force: true }).should('have.value', valor)
 })
 
 Cypress.Commands.add('clicarNoElemento', (elemento) => {

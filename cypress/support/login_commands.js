@@ -1,10 +1,16 @@
-import locators from "./locators"
+const elementos = {
+    BOTAO_SIGNIN: '#header > div.nav > div > div > nav > div.header_user_info > a',
+    INPUT_EMAIL: '#email',
+    INPUT_SENHA: '#passwd',
+    BOTAO_LOGAR: '#SubmitLogin > span',
+
+}
 
 Cypress.Commands.add('realizarLogin', (login, senha,) => {
-    
-    cy.escreverNoElemento(locators.LOGIN_PAGE.INPUT_USERNAME, login)
-    cy.escreverNoElemento(locators.LOGIN_PAGE.INPUT_PASSWORD, senha)
-    cy.clicarNoElemento(locators.LOGIN_PAGE.BOTAO_LOGIN)
+    cy.clicarNoElemento(elementos.BOTAO_SIGNIN)
+    cy.EscreverNoCampo(elementos.INPUT_EMAIL, login)
+    cy.EscreverNoCampo(elementos.INPUT_SENHA, senha)
+    cy.clicarNoElemento(elementos.BOTAO_LOGAR)
 })
 
 Cypress.Commands.add('ValidarMensagemBoasVindas', (mensagem) => {

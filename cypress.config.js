@@ -2,11 +2,9 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   e2e: {
-    // default baseUrl, etc
-    supportFile: false,
-    fixturesFolder: false,
+    
     setupNodeEvents(on, config) {
-      const environmentName = config.env.environmentName || 'local'
+      const environmentName = config.env.environmentName || 'homolog'
       const environmentFilename = `./${environmentName}.settings.json`
       console.log('loading %s', environmentFilename)
       const settings = require(environmentFilename)
