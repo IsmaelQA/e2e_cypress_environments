@@ -25,14 +25,13 @@ npx cypress open --env environmentName=prod
 npx cypress open --env environmentName=homolog
 
 Execução de teste(s) com headless em prod
-
 npx cypress run --browser chrome --env environmentName=prod
+
 Execução de teste(s) com headless em homolog
-
 npx cypress run --browser chrome --env environmentName=homolog
+
 Execução de teste(s) com headless em sandbox de um classe de teste especifica
+npx cypress run --browser chrome --env environmentName=prod --spec "cypress/e2e/tests/${nome_classe}.cy.js"
 
- npx cypress run --browser chrome --env environmentName=prod --spec "cypress/e2e/tests/${nome_classe}.cy.js"
 Execução de teste(s) com headless em qa de um classe de teste especifica
-
- npx cypress run --browser chrome --env environmentName=homolog --spec "cypress/e2e/tests/${nome_classe}.cy.js"
+npx cypress run --browser chrome --env environmentName=homolog --spec "cypress/e2e/tests/${nome_classe}.cy.js"
