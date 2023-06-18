@@ -3,6 +3,8 @@ const elementos = {
     INPUT_EMAIL: '#email',
     INPUT_SENHA: '#passwd',
     BOTAO_LOGAR: '#SubmitLogin > span',
+    BOTAO_HOME: '#columns > div.breadcrumb.clearfix > a > i',
+    LABEL_NOME_LOGIN: '#header > div.nav > div > div > nav > div:nth-child(1) > a > span'
 
 }
 
@@ -13,6 +15,8 @@ Cypress.Commands.add('realizarLogin', (login, senha,) => {
     cy.clicarNoElemento(elementos.BOTAO_LOGAR)
 })
 
-Cypress.Commands.add('ValidarMensagemBoasVindas', (mensagem) => {
-    cy.ValidarSeCampoContemMensagem(locators.MY_ACCOUNT_PAGE.LABEL_WELCOME, mensagem)
+Cypress.Commands.add('ValidarLogin', (mensagem) => {
+    cy.clicarNoElemento(elementos.BOTAO_HOME)
+    cy.ValidarSeCampoContemMensagem(elementos.LABEL_NOME_LOGIN, mensagem)
+
 })
